@@ -1,18 +1,28 @@
+
 ## Paper.id Test Case 
 ### Live Demo
 https://bintangkevin29.github.io/moviepedia/
 
 ### Installation
-Clone repository
-> git clone https://github.com/bintangkevin29/moviepedia.git
+##### 1. Clone Repository
 
-Install dependency
-> yarn install
-> npm install
+    git clone https://github.com/bintangkevin29/moviepedia.git
 
-Run 
-> yarn start
-> npm start
+##### 2. Install Dependency
+
+    yarn install
+
+or
+
+    npm install
+
+##### 3. Serve
+    yarn start
+  or
+
+    npm start
 
 ### Summary
-This is the test case for Paper.id recruitment process. The web app was built using React library using create-react-app with Typescript boilerplate.
+This is a movie index web app that built using React.js with Typescript language. The data was fetched from https://www.themoviedb.org/.
+
+Built as assignment for Centratama Group reqruitment process.
