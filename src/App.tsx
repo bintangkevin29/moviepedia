@@ -6,6 +6,7 @@ import MainLayout from "./components/main-layout";
 import "./styles/global.scss";
 import { Route } from "react-router-dom";
 import MovieDetailsPage from "./pages/movie-details-page";
+import SearchResultPage from "./pages/search-result";
 
 const modules = [
   {
@@ -17,6 +18,11 @@ const modules = [
     name: "Movie Details",
     Component: MovieDetailsPage,
     url: "/details/:id",
+  },
+  {
+    name: "Search Result",
+    Component: SearchResultPage,
+    url: "/search/:keyword",
   },
 ];
 
