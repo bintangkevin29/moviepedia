@@ -4,12 +4,25 @@ import HomePage from "./pages/home-page";
 import MainLayout from "./components/main-layout";
 
 import "./styles/global.scss";
+import { Route } from "react-router-dom";
+
+const modules = [
+  {
+    name: "Home Page",
+    Component: HomePage,
+    url: "/",
+  },
+];
 
 const App = () => {
   return (
-    <MainLayout>
-      <HomePage />
-    </MainLayout>
+    <Route exact path={modules.map((mod) => mod.url)}>
+      <MainLayout>
+        {modules.map((mod) => (
+          <Route exact path={mod.url} component={mod.Component} />
+        ))}
+      </MainLayout>
+    </Route>
   );
 };
 
