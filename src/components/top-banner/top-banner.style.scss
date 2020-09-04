@@ -1,4 +1,25 @@
 @import "../../styles/variables.scss";
 
 .topBanner {
+  padding: 20px 0px;
+
+  &__banner {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: $colorQuinary;
+    padding: 40px;
+  }
+
+  &__title {
+    font-size: 50px;
+    font-weight: 800;
+    color: $colorQuinary;
+    margin-bottom: -20px;
+    &--subtitle {
+      font-size: 30px;
+      font-weight: 600;
+    }
+  }
 }
