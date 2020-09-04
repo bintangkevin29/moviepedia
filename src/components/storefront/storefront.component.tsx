@@ -9,15 +9,16 @@ import { MovieObject } from "../../redux/movie/movie";
 interface Props {
   isFetching: boolean;
   movieData: MovieObject[];
+  dark?: boolean;
 }
 
-const Storefront: React.FC<Props> = ({ isFetching, movieData }) => {
+const Storefront: React.FC<Props> = ({ isFetching, movieData, dark = false }) => {
   return (
     <div className="storefront">
       {isFetching ? (
         <CustomSpinner />
       ) : (
-        movieData.map((movie) => <MovieCard key={movie.id} {...movie} />)
+        movieData.map((movie) => <MovieCard dark={dark} key={movie.id} {...movie} />)
       )}
     </div>
   );

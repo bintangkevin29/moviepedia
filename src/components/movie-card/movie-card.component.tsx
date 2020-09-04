@@ -5,11 +5,15 @@ import { MovieObject } from "../../redux/movie/movie";
 
 import "./movie-card.style.scss";
 
-const MovieCard: React.FC<MovieObject> = ({ ...props }) => {
+interface Props extends MovieObject {
+  dark?: boolean;
+}
+
+const MovieCard: React.FC<Props> = ({ dark, ...props }) => {
   const imageUrl = process.env.REACT_APP_API_IMAGE_URL;
   const titleMaxLength = 25;
   return (
-    <div className="movieCard">
+    <div className={`movieCard ${dark ? "movieCard--dark" : ""}`}>
       <div className="movieCard__posterContainer">
         <img className="movieCard__poster" src={`${imageUrl}${props.poster_path}`} alt="" />
         <div className="movieCard__pill">

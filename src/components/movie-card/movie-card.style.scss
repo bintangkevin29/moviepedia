@@ -9,6 +9,12 @@
   margin-right: 20px;
   margin-bottom: 20px;
   transition: transform 0.2s ease;
+
+  &--dark {
+    .movieCard__title {
+      color: $colorQuinary !important;
+    }
+  }
   &__posterContainer {
     position: relative;
 

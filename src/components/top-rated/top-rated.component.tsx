@@ -19,11 +19,12 @@ const TopRated: React.FC = () => {
   const isFetching = useSelector(selectTopRatedMovieFetchingStatus);
   useEffect(() => {
     dispatch(fetchTopRatedMovieStartAsync());
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <Section className="topRated">
-      <SectionHeader>Top Rated</SectionHeader>
-      <Storefront movieData={movieData} isFetching={isFetching} />
+    <Section dark className="topRated">
+      <SectionHeader dark>Top Rated</SectionHeader>
+      <Storefront dark movieData={movieData} isFetching={isFetching} />
     </Section>
   );
 };

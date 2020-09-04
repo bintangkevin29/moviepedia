@@ -5,11 +5,12 @@ interface Props {
   className?: string;
   children: ReactNode;
   fluid?: boolean;
+  dark?: boolean;
 }
 
-const Section: React.FC<Props> = ({ className, children, fluid }) => {
+const Section: React.FC<Props> = ({ className, children, fluid, dark = false }) => {
   return (
-    <section className={className}>
+    <section className={`${className} ${dark && `bg-tertiary`}`}>
       <Container fluid={fluid} className={`${fluid && "px-0"}`}>
         {children}
       </Container>
