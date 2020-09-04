@@ -3,6 +3,8 @@ import Section from "../../components/section";
 import SectionHeader from "../../components/section-header";
 import { useParams } from "react-router-dom";
 
+import "./search-result-page.style.scss";
+
 const SearchResultPage: React.FC = () => {
   const { keyword } = useParams();
   return (
