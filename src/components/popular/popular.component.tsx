@@ -5,6 +5,7 @@ import Section from "../section";
 
 import "./popular.style.scss";
 import Storefront from "../storefront";
+import { Container } from "react-bootstrap";
 
 const Popular: React.FC = () => {
   return (

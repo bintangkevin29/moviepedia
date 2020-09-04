@@ -1,9 +1,14 @@
 @import "../../styles/variables.scss";
 
 .movieCard {
+  cursor: pointer;
+  flex: none;
   display: flex;
   flex-direction: column;
-  width: 170px;
+  width: 160px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
   &__posterContainer {
     position: relative;
 
@@ -56,5 +61,8 @@
   }
   &__thumbIcon {
     margin-right: 5px;
+  }
+  &:hover {
+    transform: scale(1.1);
   }
 }
