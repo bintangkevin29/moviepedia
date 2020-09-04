@@ -16,15 +16,28 @@ export interface MovieObject {
 }
 
 export interface MovieState {
-  popular: MovieObject[];
-  isFetching: boolean;
+  popular: {
+    data: MovieObject[];
+    isFetching: boolean;
+  };
+  topRated: {
+    data: MovieObject[];
+    isFetching: boolean;
+  };
 }
 
 export type MovieStateActionTypes =
   | {
-      type: "MOVIE_FETCH_START";
+      type: "MOVIE_POPULAR_FETCH_START";
     }
   | {
-      type: "MOVIE_FETCH_SUCCESS";
+      type: "MOVIE_TOPRATED_FETCH_START";
+    }
+  | {
+      type: "MOVIE_POPULAR_FETCH_SUCCESS";
+      payload: MovieObject[];
+    }
+  | {
+      type: "MOVIE_TOPRATED_FETCH_SUCCESS";
       payload: MovieObject[];
     };

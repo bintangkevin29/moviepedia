@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { fetchMovieStartAsync } from "../../redux/movie/movie.action";
+import { fetchPopularMovieStartAsync } from "../../redux/movie/movie.action";
 import {
   selectPopularMovieFetchingStatus,
   selectPopularMovies,
@@ -19,7 +19,7 @@ const Popular: React.FC = () => {
   const movieData = useSelector(selectPopularMovies);
 
   useEffect(() => {
-    dispatch(fetchMovieStartAsync());
+    dispatch(fetchPopularMovieStartAsync());
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
