@@ -4,6 +4,7 @@ import { HiThumbUp } from "react-icons/hi";
 import { MovieObject } from "../../redux/movie/movie";
 
 import "./movie-card.style.scss";
+import { Link } from "react-router-dom";
 
 interface Props extends MovieObject {
   dark?: boolean;
@@ -13,7 +14,7 @@ const MovieCard: React.FC<Props> = ({ dark, ...props }) => {
   const imageUrl = process.env.REACT_APP_API_IMAGE_URL;
   const titleMaxLength = 25;
   return (
-    <div className={`movieCard ${dark ? "movieCard--dark" : ""}`}>
+    <Link to={`/details/${props.id}`} className={`movieCard ${dark ? "movieCard--dark" : ""}`}>
       <div className="movieCard__posterContainer">
         <img className="movieCard__poster" src={`${imageUrl}${props.poster_path}`} alt="" />
         <div className="movieCard__pill">
@@ -33,7 +34,7 @@ const MovieCard: React.FC<Props> = ({ dark, ...props }) => {
             : props.title}
         </span>
       </div>
-    </div>
+    </Link>
   );
 };
 

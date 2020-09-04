@@ -3,8 +3,8 @@ import Axios from "axios";
 
 import { MovieStateActionTypes } from "./movie";
 
-const apiUrl = process.env.REACT_APP_API_URL;
-const apiKey = process.env.REACT_APP_API_KEY;
+export const apiUrl = process.env.REACT_APP_API_URL;
+export const apiKey = process.env.REACT_APP_API_KEY;
 
 const fetchPopularMovieStart = (): MovieStateActionTypes => ({
   type: "MOVIE_POPULAR_FETCH_START",
