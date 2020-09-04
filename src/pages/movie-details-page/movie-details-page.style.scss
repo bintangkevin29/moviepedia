@@ -2,4 +2,66 @@
 
 .movieDetailsPage {
   padding: 40px 0px;
+  &__mainContent {
+    display: flex;
+  }
+  &__details {
+    @media (min-width: 991px) {
+      margin-left: -50px;
+      padding: 50px !important;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 40px !important;
+    color: $colorQuinary;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: $colorSecondary;
+    align-self: center;
+  }
+  &__detailsContainer {
+    z-index: -999;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__posterContainer {
+    display: flex;
+    justify-content: center;
+  }
+  &__itemName {
+    font-weight: 700;
+    padding-right: 20px;
+  }
+  &__detailTable {
+    margin-bottom: 20px;
+  }
+  &__tagline {
+    font-weight: 400;
+    font-size: 20px;
+    opacity: 0.6;
+    font-style: italic;
+  }
+  &__synopsis {
+    opacity: 0.6;
+    margin-bottom: 20px;
+  }
+  &__score {
+    background-color: $colorTertiary;
+    color: $colorQuinary;
+    align-self: flex-start;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  &__scoreDetails {
+    margin-left: 10px;
+  }
 }
