@@ -1,4 +1,60 @@
 @import "../../styles/variables.scss";
 
 .movieCard {
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  &__posterContainer {
+    position: relative;
+
+    margin-bottom: 20px;
+  }
+  &__poster {
+    width: 100%;
+    border-radius: 10px;
+    height: 230px;
+    background-color: $colorPrimary;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+  }
+  &__description {
+    padding: 0px 5px;
+  }
+  &__title {
+    color: $colorPrimary;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  &__pill {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 5;
+    font-size: 12px;
+  }
+  &__pillInner {
+    padding: 5px 10px;
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.5);
+    display: flex;
+    align-items: center;
+    &--date {
+      background-color: $colorPrimary;
+      color: $colorQuinary;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+    &--rating {
+      background-color: $colorSecondary;
+      color: $colorPrimary;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
+  &__thumbIcon {
+    margin-right: 5px;
+  }
 }
