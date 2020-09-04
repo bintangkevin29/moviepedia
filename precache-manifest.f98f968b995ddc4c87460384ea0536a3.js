@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed933f290d622b9d558533f566d8cc31",
+    "revision": "f687913b6ba7facbca01319cbeb8aaaf",
     "url": "/moviepedia/index.html"
   },
   {
-    "revision": "b90b7ef6d1d42cf3d09c",
+    "revision": "9676e66c213ae1a275fb",
     "url": "/moviepedia/static/css/main.67b29ef0.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/moviepedia/static/js/2.d3da48cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b90b7ef6d1d42cf3d09c",
-    "url": "/moviepedia/static/js/main.e6c79a3a.chunk.js"
+    "revision": "9676e66c213ae1a275fb",
+    "url": "/moviepedia/static/js/main.626d4801.chunk.js"
   },
   {
     "revision": "136f79611db1441e98d3",
