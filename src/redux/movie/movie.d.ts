@@ -1,5 +1,22 @@
+export interface MovieObject {
+  popularity: number;
+  vote_count: number;
+  video: boolean;
+  poster_path: string;
+  id: number;
+  adult: boolean;
+  backdrop_path: string;
+  original_language: string;
+  original_title: string;
+  genre_ids: Array[number];
+  title: string;
+  vote_average: number;
+  overview: string;
+  release_date: string;
+}
+
 export interface MovieState {
-  popular: object[];
+  popular: MovieObject[];
   isFetching: boolean;
 }
 
@@ -9,5 +26,5 @@ export type MovieStateActionTypes =
     }
   | {
       type: "MOVIE_FETCH_SUCCESS";
-      payload: object[];
+      payload: MovieObject[];
     };
