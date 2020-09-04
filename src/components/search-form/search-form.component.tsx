@@ -1,13 +1,18 @@
 import React from "react";
-import { Form, Button } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 import CustomInput from "../custom-input";
+import CustomButton from "../custom-button";
+
+import "./search-form.style.scss";
 
 const SearchForm: React.FC = () => {
   return (
     <Form className="searchForm" inline>
       <CustomInput placeholder="Search Here" />
-      <Button variant="outline-success">Search</Button>
+      <CustomButton variant="secondary" className="searchForm__button">
+        Search
+      </CustomButton>
     </Form>
   );
 };
