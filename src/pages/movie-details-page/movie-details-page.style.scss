@@ -12,7 +12,7 @@
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
     }
-    border-radius: 30px;
+    border-radius: 20px;
     margin-top: 20px;
     padding: 40px !important;
     color: $colorQuinary;
@@ -32,9 +32,16 @@
     display: flex;
     justify-content: center;
   }
+  &__poster {
+    box-shadow: 0 0 20px rgba($color: #000000, $alpha: 0.05);
+  }
   &__itemName {
     font-weight: 700;
     padding-right: 20px;
+    vertical-align: top;
+  }
+  &__itemDescription {
+    vertical-align: top;
   }
   &__detailTable {
     margin-bottom: 20px;

@@ -58,7 +58,6 @@ const MovieDetailsPage: React.FC = () => {
                     <tr>
                       <td className="movieDetailsPage__itemName">Director(s)</td>
                       <td className="movieDetailsPage__itemDescription">
-                        :{" "}
                         {credits?.crew
                           .filter((c) => c.department === "Directing")
                           .map((c) => c.name)
@@ -68,7 +67,6 @@ const MovieDetailsPage: React.FC = () => {
                     <tr>
                       <td className="movieDetailsPage__itemName">Writer(s)</td>
                       <td className="movieDetailsPage__itemDescription">
-                        :{" "}
                         {credits?.crew
                           .filter((c) => c.department === "Writing")
                           .map((c) => c.name)
@@ -78,13 +76,13 @@ const MovieDetailsPage: React.FC = () => {
                     <tr>
                       <td className="movieDetailsPage__itemName">Genre</td>
                       <td className="movieDetailsPage__itemDescription">
-                        : {movieDetails?.genres.map((genre) => genre.name).join(", ")}
+                        {movieDetails?.genres.map((genre) => genre.name).join(", ")}
                       </td>
                     </tr>
                     <tr>
                       <td className="movieDetailsPage__itemName">Release Date</td>
                       <td className="movieDetailsPage__itemDescription">
-                        : {movieDetails?.release_date}
+                        {movieDetails?.release_date}
                       </td>
                     </tr>
                   </tbody>
