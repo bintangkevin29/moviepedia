@@ -1,5 +1,5 @@
 
-## Paper.id Test Case 
+## MoviePedia
 ### Live Demo
 https://bintangkevin29.github.io/moviepedia/
 
