@@ -3,6 +3,7 @@ import { Navbar, Container } from "react-bootstrap";
 
 import "./navbar.style.scss";
 import { Link } from "react-router-dom";
+import SearchForm from "../search-form";
 
 const NavbarComponent: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const NavbarComponent: React.FC = () => {
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <SearchForm />
       </Container>
     </Navbar>
   );
