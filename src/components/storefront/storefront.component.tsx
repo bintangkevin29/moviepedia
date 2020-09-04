@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./storefront.style.scss";
 import MovieCard from "../movie-card";
-import { Container } from "react-bootstrap";
+
+import "./storefront.style.scss";
 
 const Storefront: React.FC = () => {
   return (

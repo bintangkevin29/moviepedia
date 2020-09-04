@@ -2,10 +2,10 @@ import React from "react";
 
 import SectionHeader from "../section-header";
 import Section from "../section";
+import Storefront from "../storefront";
+
 
 import "./popular.style.scss";
-import Storefront from "../storefront";
-import { Container } from "react-bootstrap";
 
 const Popular: React.FC = () => {
   return (
