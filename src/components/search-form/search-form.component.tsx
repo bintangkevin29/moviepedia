@@ -1,5 +1,6 @@
 import React from "react";
 import { Form } from "react-bootstrap";
+import { FaSearch } from "react-icons/fa";
 
 import CustomInput from "../custom-input";
 import CustomButton from "../custom-button";
@@ -11,7 +12,7 @@ const SearchForm: React.FC = () => {
     <Form className="searchForm" inline>
       <CustomInput placeholder="Search Here" />
       <CustomButton variant="secondary" className="searchForm__button">
-        Search
+        <FaSearch />
       </CustomButton>
     </Form>
   );
