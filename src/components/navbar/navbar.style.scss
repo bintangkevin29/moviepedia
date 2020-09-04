@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.navbarComponent {
+  box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.05);
+  background: $colorPrimary;
+  color: $colorSecondary;
+  &__title {
+    color: $colorTertiary;
+    font-weight: 800;
+  }
+}
