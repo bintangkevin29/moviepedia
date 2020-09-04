@@ -9,6 +9,10 @@ const INIT_STATE: MovieState = {
     data: [],
     isFetching: false,
   },
+  nowPlaying: {
+    data: [],
+    isFetching: false,
+  },
 };
 
 const movieReducer = (state = INIT_STATE, action: MovieStateActionTypes): MovieState => {
@@ -29,6 +33,14 @@ const movieReducer = (state = INIT_STATE, action: MovieStateActionTypes): MovieS
           isFetching: true,
         },
       };
+    case "MOVIE_NOW_PLAYING_FETCH_START":
+      return {
+        ...state,
+        nowPlaying: {
+          ...state.nowPlaying,
+          isFetching: true,
+        },
+      };
     case "MOVIE_POPULAR_FETCH_SUCCESS":
       return {
         ...state,
@@ -41,6 +53,14 @@ const movieReducer = (state = INIT_STATE, action: MovieStateActionTypes): MovieS
       return {
         ...state,
         topRated: {
+          data: action.payload,
+          isFetching: false,
+        },
+      };
+    case "MOVIE_NOW_PLAYING_FETCH_SUCCESS":
+      return {
+        ...state,
+        nowPlaying: {
           data: action.payload,
           isFetching: false,
         },

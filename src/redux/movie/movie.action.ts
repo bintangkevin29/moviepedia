@@ -14,6 +14,10 @@ const fetchTopRatedMovieStart = (): MovieStateActionTypes => ({
   type: "MOVIE_TOPRATED_FETCH_START",
 });
 
+const fetchNowPlayingMovieStart = (): MovieStateActionTypes => ({
+  type: "MOVIE_NOW_PLAYING_FETCH_START",
+});
+
 const fetchPopularMovieSuccess = (data: any): MovieStateActionTypes => ({
   type: "MOVIE_POPULAR_FETCH_SUCCESS",
   payload: data,
@@ -21,6 +25,11 @@ const fetchPopularMovieSuccess = (data: any): MovieStateActionTypes => ({
 
 const fetchTopRatedMovieSuccess = (data: any): MovieStateActionTypes => ({
   type: "MOVIE_TOPRATED_FETCH_SUCCESS",
+  payload: data,
+});
+
+const fetchNowPlayingMovieSuccess = (data: any): MovieStateActionTypes => ({
+  type: "MOVIE_NOW_PLAYING_FETCH_SUCCESS",
   payload: data,
 });
 
@@ -38,6 +47,15 @@ export const fetchTopRatedMovieStartAsync = () => {
     dispatch(fetchTopRatedMovieStart());
     Axios.get(`${apiUrl}/movie/top_rated${apiKey}`).then((res) =>
       dispatch(fetchTopRatedMovieSuccess(res.data.results))
+    );
+  };
+};
+
+export const fetchNowPlayingMovieStartAsync = () => {
+  return (dispatch: Dispatch) => {
+    dispatch(fetchNowPlayingMovieStart());
+    Axios.get(`${apiUrl}/movie/now_playing${apiKey}`).then((res) =>
+      dispatch(fetchNowPlayingMovieSuccess(res.data.results))
     );
   };
 };

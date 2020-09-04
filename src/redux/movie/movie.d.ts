@@ -24,6 +24,10 @@ export interface MovieState {
     data: MovieObject[];
     isFetching: boolean;
   };
+  nowPlaying: {
+    data: MovieObject[];
+    isFetching: boolean;
+  };
 }
 
 export type MovieStateActionTypes =
@@ -34,10 +38,17 @@ export type MovieStateActionTypes =
       type: "MOVIE_TOPRATED_FETCH_START";
     }
   | {
+      type: "MOVIE_NOW_PLAYING_FETCH_START";
+    }
+  | {
       type: "MOVIE_POPULAR_FETCH_SUCCESS";
       payload: MovieObject[];
     }
   | {
       type: "MOVIE_TOPRATED_FETCH_SUCCESS";
+      payload: MovieObject[];
+    }
+  | {
+      type: "MOVIE_NOW_PLAYING_FETCH_SUCCESS";
       payload: MovieObject[];
     };

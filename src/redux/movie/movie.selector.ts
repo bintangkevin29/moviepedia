@@ -23,3 +23,13 @@ export const selectTopRatedMovies = createSelector(
   [selectMovieState],
   (state) => state.topRated.data
 );
+
+export const selectNowPlayingMovieFetchingStatus = createSelector(
+  [selectMovieState],
+  (state) => state.nowPlaying.isFetching
+);
+
+export const selectNowPlayingMovies = createSelector(
+  [selectMovieState],
+  (state) => state.nowPlaying.data
+);
