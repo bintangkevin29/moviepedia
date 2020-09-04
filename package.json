@@ -2,7 +2,7 @@
   "name": "centratama",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://bintangkevin29.github.io/moviepedia",
+  "homepage": "https://bintangkevin29.github.io/moviepedia/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
