@@ -1,27 +1,33 @@
 import React from "react";
 import { HiThumbUp } from "react-icons/hi";
 
+import { MovieObject } from "../../redux/movie/movie";
+
 import "./movie-card.style.scss";
 
-const MovieCard: React.FC = () => {
+const MovieCard: React.FC<MovieObject> = ({ ...props }) => {
+  const imageUrl = process.env.REACT_APP_API_IMAGE_URL;
+  const titleMaxLength = 25;
   return (
     <div className="movieCard">
       <div className="movieCard__posterContainer">
-        <img
-          className="movieCard__poster"
-          src="https://image.tmdb.org/t/p/w220_and_h330_face/wlfDxbGEsW58vGhFljKkcR5IxDj.jpg"
-          alt=""
-        />
+        <img className="movieCard__poster" src={`${imageUrl}${props.poster_path}`} alt="" />
         <div className="movieCard__pill">
-          <div className="movieCard__pillInner movieCard__pillInner--date">20 Jul 2020</div>
+          <div className="movieCard__pillInner movieCard__pillInner--date">
+            {props.release_date}
+          </div>
           <div className="movieCard__pillInner movieCard__pillInner--rating">
             <HiThumbUp className="movieCard__thumbIcon" />
-            10%
+            {props.vote_average}
           </div>
         </div>
       </div>
       <div className="movieCard__description">
-        <span className="movieCard__title">The Avenger</span>
+        <span className="movieCard__title">
+          {props.title.length > titleMaxLength
+            ? `${props.title.substring(0, titleMaxLength)}...`
+            : props.title}
+        </span>
       </div>
     </div>
   );

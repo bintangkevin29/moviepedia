@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { fetchMovieStartAsync } from "../../redux/movie/movie.action";
+import {
+  selectPopularMovieFetchingStatus,
+  selectPopularMovies,
+} from "../../redux/movie/movie.selector";
 
 import SectionHeader from "../section-header";
 import Section from "../section";
@@ -11,6 +15,9 @@ import "./popular.style.scss";
 
 const Popular: React.FC = () => {
   const dispatch = useDispatch();
+  const isFetching = useSelector(selectPopularMovieFetchingStatus);
+  const movieData = useSelector(selectPopularMovies);
+
   useEffect(() => {
     dispatch(fetchMovieStartAsync());
     //eslint-disable-next-line react-hooks/exhaustive-deps
@@ -19,7 +26,7 @@ const Popular: React.FC = () => {
   return (
     <Section className="popular">
       <SectionHeader>Popular</SectionHeader>
-      <Storefront />
+      <Storefront movieData={movieData} isFetching={isFetching} />
     </Section>
   );
 };
