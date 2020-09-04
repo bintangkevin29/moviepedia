@@ -1,10 +1,12 @@
 import React from "react";
-import { Form, Button, FormControl } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
+
+import CustomInput from "../custom-input";
 
 const SearchForm: React.FC = () => {
   return (
     <Form className="searchForm" inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
+      <CustomInput placeholder="Search Here" />
       <Button variant="outline-success">Search</Button>
     </Form>
   );
