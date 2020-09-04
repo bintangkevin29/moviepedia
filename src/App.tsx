@@ -24,8 +24,8 @@ const App = () => {
   return (
     <Route exact path={modules.map((mod) => mod.url)}>
       <MainLayout>
-        {modules.map((mod) => (
-          <Route exact path={mod.url} component={mod.Component} />
+        {modules.map((mod, i) => (
+          <Route key={i} exact path={mod.url} component={mod.Component} />
         ))}
       </MainLayout>
     </Route>
