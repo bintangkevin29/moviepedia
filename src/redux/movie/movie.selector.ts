@@ -9,4 +9,17 @@ export const selectPopularMovieFetchingStatus = createSelector(
   (state) => state.popular.isFetching
 );
 
-export const selectPopularMovies = createSelector([selectMovieState], (state) => state.popular.data);
+export const selectPopularMovies = createSelector(
+  [selectMovieState],
+  (state) => state.popular.data
+);
+
+export const selectTopRatedMovieFetchingStatus = createSelector(
+  [selectMovieState],
+  (state) => state.topRated.isFetching
+);
+
+export const selectTopRatedMovies = createSelector(
+  [selectMovieState],
+  (state) => state.topRated.data
+);
