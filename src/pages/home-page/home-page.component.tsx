@@ -1,7 +1,9 @@
 import React from "react";
 
+import TopBanner from "../../components/top-banner";
+
 const HomePage: React.FC = () => {
-  return <div>Hello World</div>;
+  return <TopBanner />;
 };
 
 export default HomePage;
