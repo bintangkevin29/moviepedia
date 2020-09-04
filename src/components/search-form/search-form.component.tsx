@@ -9,7 +9,7 @@ import "./search-form.style.scss";
 
 const SearchForm: React.FC = () => {
   return (
-    <Form className="searchForm" inline>
+    <Form className="searchForm">
       <CustomInput placeholder="Search Here" />
       <CustomButton variant="secondary" className="searchForm__button">
         <FaSearch />

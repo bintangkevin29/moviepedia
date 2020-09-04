@@ -1,6 +1,8 @@
 @import "../../styles/variables.scss";
 
 .searchForm {
+  display: flex;
+  flex-direction: row;
   &__button {
     margin-left: 10px;
   }
