@@ -6,7 +6,7 @@ import { useParams } from "react-router-dom";
 const SearchResultPage: React.FC = () => {
   const { keyword } = useParams();
   return (
-    <Section>
+    <Section className="searchResultPage">
       <SectionHeader>Search Result For {keyword}</SectionHeader>
     </Section>
   );
