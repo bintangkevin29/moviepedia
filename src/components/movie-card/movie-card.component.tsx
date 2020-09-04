@@ -16,7 +16,15 @@ const MovieCard: React.FC<Props> = ({ dark, ...props }) => {
   return (
     <Link to={`/details/${props.id}`} className={`movieCard ${dark ? "movieCard--dark" : ""}`}>
       <div className="movieCard__posterContainer">
-        <img className="movieCard__poster" src={`${imageUrl}${props.poster_path}`} alt="" />
+        <img
+          className="movieCard__poster"
+          src={
+            props.poster_path
+              ? imageUrl + props.poster_path
+              : "https://via.placeholder.com/600x900.png?text=Image%20Unavailable"
+          }
+          alt=""
+        />
         <div className="movieCard__pill">
           <div className="movieCard__pillInner movieCard__pillInner--date">
             {props.release_date}

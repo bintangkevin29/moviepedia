@@ -13,7 +13,7 @@ const NavbarComponent: React.FC = () => {
           <Col xs={4}>
             <Navbar.Brand>
               <Link to="/">
-                <strong className="navbarComponent__title">Movie DB</strong>
+                <strong className="navbarComponent__title">MoviePedia</strong>
               </Link>
             </Navbar.Brand>
           </Col>

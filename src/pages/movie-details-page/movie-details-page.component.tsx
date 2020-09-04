@@ -13,6 +13,7 @@ import MoviePoster from "../../components/movie-poster";
 import "./movie-details-page.style.scss";
 import { HiThumbUp } from "react-icons/hi";
 import { Row, Col } from "react-bootstrap";
+import { Helmet } from "react-helmet";
 
 const MovieDetailsPage: React.FC = () => {
   const [movieDetails, setMovieDetails] = useState<MovieDetails>();
@@ -35,11 +36,11 @@ const MovieDetailsPage: React.FC = () => {
     //eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log(movieDetails);
-  console.log(credits);
-
   return (
     <Section className="movieDetailsPage">
+      <Helmet>
+        <title>{isLoading ? "Loading..." : movieDetails?.title} &ndash; MoviePedia</title>
+      </Helmet>
       {isLoading ? (
         <CustomSpinner />
       ) : (

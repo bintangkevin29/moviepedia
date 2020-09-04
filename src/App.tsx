@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import HomePage from "./pages/home-page";
 import MainLayout from "./components/main-layout";
 
 import "./styles/global.scss";
-import { Route } from "react-router-dom";
+import { Route, useHistory } from "react-router-dom";
 import MovieDetailsPage from "./pages/movie-details-page";
 import SearchResultPage from "./pages/search-result";
 
@@ -27,6 +27,17 @@ const modules = [
 ];
 
 const App = () => {
+  const history = useHistory();
+  useEffect(() => {
+    const unlisten = history.listen(() => {
+      window.scrollTo(0, 0);
+    });
+    return () => {
+      unlisten();
+    };
+    //eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Route exact path={modules.map((mod) => mod.url)}>
       <MainLayout>

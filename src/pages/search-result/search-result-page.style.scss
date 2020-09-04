@@ -2,4 +2,22 @@
 
 .searchResultPage {
   padding: 40px 0px;
+  &__results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__fetchMore {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__fetchButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
